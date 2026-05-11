@@ -18,14 +18,14 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 body {
-  background-color: #020617;
+  background-color: #0B1120;
   color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #f05223 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #f05223 0%, #e79ecf 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,23 +37,9 @@ body {
 }
 
 .glass-morphism {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(16px);
+  background: rgba(58, 21, 84, 0.3);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.glass-panel {
-  background: rgba(2, 6, 23, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.brand-border {
-  border-color: rgba(240, 82, 35, 0.2);
-}
-
-.brand-shadow {
-  box-shadow: 0 0 30px rgba(240, 82, 35, 0.15);
 }
 
 ::selection {
@@ -63,17 +49,16 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #0B1120;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border: 2px solid #020617;
-  border-radius: 10px;
+  background: #3a1554;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -87,11 +72,4 @@ body {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
-}
-
-.grid-bg {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
 }
