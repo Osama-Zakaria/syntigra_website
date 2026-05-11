@@ -34,7 +34,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 group">
-            <img src="/assets/white icon.png" alt="Syntigra Logo" className="h-9 w-auto group-hover:rotate-6 transition-transform duration-500" />
+            <img src="/assets/white-icon.png" alt="Syntigra Logo" className="h-9 w-auto group-hover:rotate-6 transition-transform duration-500" />
             <span className="text-2xl font-display font-bold text-white tracking-tight group-hover:text-brand-orange transition-colors">
               <span className="text-gradient">SYNT</span>IGRA
             </span>
@@ -110,7 +110,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <img src="/assets/white icon.png" alt="Syntigra Logo" className="h-7 w-auto" />
+              <img src="/assets/white-icon.png" alt="Syntigra Logo" className="h-7 w-auto" />
               <span className="text-xl font-display font-bold text-white tracking-tight">
                 <span className="text-gradient">SYNT</span>IGRA
               </span>
