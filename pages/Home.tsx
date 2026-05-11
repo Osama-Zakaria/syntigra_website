@@ -181,16 +181,21 @@ export const Home = () => {
                     </RevealOnScroll>
                 </div>
                 
-                <div className="lg:w-1/2 relative flex justify-center lg:justify-end">
+                <div className="lg:w-1/2 relative">
                     <RevealOnScroll delay={200}>
-                        <div className="relative">
-                            {/* Background Elements - Light Mode */}
-                            <div className="absolute top-10 -left-10 w-full h-full bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 transform -rotate-3"></div>
-                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-200/50 dark:bg-purple-900/30 blur-3xl rounded-full"></div>
-                            
-                            {/* Main Report Visual */}
-                            <ReportMockup />
+                        <div className="relative z-10 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 group">
+                            <img 
+                                src="/assets/dashboard-mockup.png" 
+                                alt="Syntigra Dashboard Mockup" 
+                                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                                <div className="text-white font-bold">Real-time Engineering Insights</div>
+                            </div>
                         </div>
+                        {/* Decorative blobs */}
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-orange/20 blur-3xl rounded-full animate-pulse"></div>
+                        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-purple/20 blur-3xl rounded-full animate-pulse delay-700"></div>
                     </RevealOnScroll>
                 </div>
             </div>

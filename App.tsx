@@ -5,9 +5,10 @@ import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Technology } from './pages/Technology';
 import CaseStudies from './pages/CaseStudies';
-import { Check, Mail, MapPin, Phone, Shield, Lock, FileText, Briefcase, Activity, Cpu, ArrowRight } from 'lucide-react';
+import { Check, Mail, MapPin, Phone, Shield, Lock, FileText, Briefcase, Activity, Cpu, ArrowRight, Database } from 'lucide-react';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { PageHero } from './components/PageHero';
+import ScrollToTop from './components/ScrollToTop';
 
 // -- Simple placeholder pages for the mockup where specialized logic isn't strictly necessary --
 
@@ -74,35 +75,66 @@ const Contact = () => (
 const Integrations = () => (
   <div className="pb-24 bg-slate-950">
     <PageHero 
-        badge="Ecosystem"
-        title={<>Seamless <span className="text-gradient">Integrations</span></>}
-        subtitle="Connecting your entire ecosystem from legacy mainframes to modern cloud APIs with pre-built connectors."
+        badge="Connectivity"
+        title="Unified Ecosystem"
+        subtitle="Connect Syntigra to your entire data stack with native, high-performance adapters."
         color="orange"
-        pattern="waves"
+        pattern="grid"
     />
-
-    <div className="max-w-7xl mx-auto px-4 pt-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {['Salesforce', 'SAP', 'HubSpot', 'Oracle', 'Stripe', 'Shopify', 'Slack', 'Jira'].map((name, i) => (
-            <RevealOnScroll key={name} delay={i * 50}>
-            <div className="h-32 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-800 hover:border-brand-orange shadow-sm hover:shadow-lg transition-all group">
-                <span className="text-xl font-bold text-slate-300 group-hover:text-white">{name}</span>
+    <div className="max-w-7xl mx-auto px-4 pt-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { 
+            cat: "Cloud Storage", 
+            tools: [
+              { n: 'AWS S3', d: 'Native S3 Bucket monitoring & ingestion.' },
+              { n: 'Azure Blob', d: 'Secure enterprise-scale object storage.' },
+              { n: 'GCP Storage', d: 'High-speed Google Cloud integration.' }
+            ]
+          },
+          { 
+            cat: "Data Warehouses", 
+            tools: [
+              { n: 'Snowflake', d: 'Near-zero latency data streaming.' },
+              { n: 'BigQuery', d: 'Serverless enterprise data warehousing.' },
+              { n: 'Redshift', d: 'Optimized Amazon Redshift pipelines.' }
+            ]
+          },
+          { 
+            cat: "Streaming & Ops", 
+            tools: [
+              { n: 'Apache Kafka', d: 'Real-time event-driven architecture.' },
+              { n: 'Databricks', d: 'Unified analytics & Lakehouse ops.' },
+              { n: 'dbt', d: 'Modular SQL transformation layers.' }
+            ]
+          }
+        ].map((group, idx) => (
+          <RevealOnScroll key={idx} delay={idx * 100}>
+            <div className="glass-panel p-8 rounded-2xl border-slate-800 h-full">
+              <h3 className="text-xl font-bold text-white mb-8 border-b border-slate-800 pb-4 flex items-center">
+                <Database className="w-5 h-5 mr-2 text-brand-orange" />
+                {group.cat}
+              </h3>
+              <div className="space-y-6">
+                {group.tools.map((tool, i) => (
+                  <div key={i} className="group">
+                    <div className="text-white font-bold mb-1 group-hover:text-brand-orange transition-colors">{tool.n}</div>
+                    <div className="text-slate-500 text-sm leading-relaxed">{tool.d}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            </RevealOnScroll>
+          </RevealOnScroll>
         ))}
-        </div>
-        
-        <RevealOnScroll delay={300}>
-        <div className="mt-20 p-12 bg-slate-900 rounded-2xl border border-slate-800 shadow-xl text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">Custom Middleware Solutions</h3>
-            <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
-            When out-of-the-box connectors fail, we engineer custom middleware layers that ensure data integrity and security between disparate systems.
-            </p>
-            <div className="w-1/2 mx-auto h-2 bg-slate-800 rounded-full overflow-hidden">
-            <div className="h-full bg-gradient-to-r from-brand-orange via-brand-pink to-brand-yellow w-full animate-pulse"></div>
-            </div>
-        </div>
-        </RevealOnScroll>
+      </div>
+
+      <div className="mt-20 glass-panel p-10 rounded-2xl border-brand-orange/10 text-center">
+        <h3 className="text-2xl font-bold text-white mb-4">Don't see your tool?</h3>
+        <p className="text-slate-400 mb-8">Our SDK allows for custom adapter development in under 48 hours.</p>
+        <button className="px-8 py-3 rounded-lg bg-slate-800 text-white font-bold hover:bg-slate-700 transition-all border border-slate-700">
+          Request Integration
+        </button>
+      </div>
     </div>
   </div>
 );
@@ -229,6 +261,7 @@ const Engagement = () => (
 const App = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
