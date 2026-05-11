@@ -247,25 +247,18 @@ export const Home = () => {
 
                 <div className="lg:w-1/2 relative">
                     <RevealOnScroll delay={200}>
-                        <div className="glass-panel p-12 rounded-3xl border-brand-purple/20 relative group overflow-hidden">
-                            <div className="absolute inset-0 grid-bg opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                            <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-brand-orange to-brand-purple p-0.5 mb-8 shadow-2xl">
-                                    <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-                                        <Database className="w-12 h-12 text-white animate-bounce" />
-                                    </div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-black text-white mb-2">Syntigra.Agent.exe</div>
-                                    <div className="text-brand-purple font-mono text-sm tracking-widest">VERSION 2.4.0 - STABLE</div>
-                                    <div className="mt-8 flex gap-2">
-                                        {[1,2,3,4,5].map(i => (
-                                            <div key={i} className="w-8 h-1.5 rounded-full bg-brand-purple/30 animate-pulse" style={{ animationDelay: `${i*200}ms` }}></div>
-                                        ))}
-                                    </div>
-                                </div>
+                        <div className="relative z-10 rounded-2xl overflow-hidden border border-brand-purple/30 shadow-2xl bg-slate-900 group">
+                            <img 
+                                src="/assets/agent-ui.png" 
+                                alt="Syntigra Service Agent UI" 
+                                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                                <div className="text-white font-bold">Active Local Data Stream</div>
                             </div>
                         </div>
+                        {/* Orbiting particles / decoration */}
+                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-purple/20 blur-3xl rounded-full animate-pulse"></div>
                     </RevealOnScroll>
                 </div>
             </div>
