@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Services } from './pages/Services';
 import { Technology } from './pages/Technology';
+import CaseStudies from './pages/CaseStudies';
 import { Check, Mail, MapPin, Phone, Shield, Lock, FileText, Briefcase, Activity, Cpu, ArrowRight } from 'lucide-react';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { PageHero } from './components/PageHero';
@@ -103,58 +104,6 @@ const Integrations = () => (
         </div>
         </RevealOnScroll>
     </div>
-  </div>
-);
-
-const CaseStudies = () => (
-  <div className="pb-24 bg-slate-950">
-     <PageHero 
-        badge="Success Stories"
-        title="Case Studies"
-        subtitle="See how we've transformed data infrastructure for global enterprises."
-        color="orange"
-        pattern="grid"
-    />
-     <div className="max-w-7xl mx-auto px-4 space-y-16 pt-16">
-       {[
-         {
-           title: "Global Retailer - Real-time Inventory",
-           stats: [
-             { l: 'Data Latency', v: '-95%' },
-             { l: 'Revenue Uplift', v: '+12%' },
-           ],
-           desc: "Migrated a batch-based legacy SQL system to a Kafka + Spark streaming architecture, enabling real-time inventory visibility across 2,000+ stores."
-         },
-         {
-           title: "FinTech Unicorn - Fraud Detection",
-           stats: [
-             { l: 'Processing Volume', v: '10k TPS' },
-             { l: 'False Positives', v: '-40%' },
-           ],
-           desc: "Built a machine learning data pipeline using Airflow and Databricks to analyze transaction patterns in sub-100ms windows."
-         }
-       ].map((study, idx) => (
-         <RevealOnScroll key={idx} delay={idx * 100}>
-           <div className="flex flex-col md:flex-row bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg hover:shadow-xl transition-shadow">
-             <div className="md:w-1/3 bg-slate-950 p-10 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-800">
-                {study.stats.map((s, i) => (
-                  <div key={i} className="mb-6 last:mb-0">
-                    <div className="text-4xl font-bold text-brand-orange mb-1">{s.v}</div>
-                    <div className="text-sm text-slate-500 uppercase tracking-wide font-bold">{s.l}</div>
-                  </div>
-                ))}
-             </div>
-             <div className="p-10 md:w-2/3 flex flex-col justify-center">
-               <h3 className="text-3xl font-bold text-white mb-4">{study.title}</h3>
-               <p className="text-slate-400 leading-relaxed mb-8 text-lg">{study.desc}</p>
-               <button className="text-brand-orange font-medium hover:text-orange-600 transition-colors flex items-center text-lg">
-                 Read Full Story <Check className="ml-2 w-5 h-5" />
-               </button>
-             </div>
-           </div>
-         </RevealOnScroll>
-       ))}
-     </div>
   </div>
 );
 

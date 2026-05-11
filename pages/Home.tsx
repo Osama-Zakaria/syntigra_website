@@ -175,8 +175,8 @@ export const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <Link to="/services" className="text-brand-orange border-b-2 border-brand-orange/30 pb-1 hover:border-brand-orange transition-all font-bold">
-                            View Sample Reports
+                        <Link to="/cases" className="text-brand-orange border-b-2 border-brand-orange/30 pb-1 hover:border-brand-orange transition-all font-bold">
+                            View Success Stories
                         </Link>
                     </RevealOnScroll>
                 </div>
