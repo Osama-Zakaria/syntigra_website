@@ -301,7 +301,7 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
-        className="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-6"
+        className="fixed top-0 left-0 right-0 z-50 px-2 py-4 md:px-6"
       >
         <div className="container mx-auto">
           <div className={`bg-slate-900/70 backdrop-blur-xl border ${scrolled ? 'border-white/10 shadow-lg shadow-black/20' : 'border-transparent shadow-none'} rounded-2xl px-6 py-3 flex items-center justify-between transition-all duration-300`}>
@@ -541,7 +541,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-8 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -556,7 +556,7 @@ const Hero = () => {
             <span className="text-xs font-semibold tracking-wide text-cyan-300 uppercase">Next Gen Data Architecture</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.85] mb-10 tracking-tighter">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.9] mb-10 tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-slate-500/50">
               Transform Data Into
             </span> <br />
@@ -1614,7 +1614,7 @@ const Contact = () => {
 
 export default function App() {
   return (
-    <div className="bg-[#020617] min-h-screen text-white font-sans">
+    <div className="bg-[#020617] min-h-screen text-white font-sans overflow-x-hidden">
       <Header />
       <Hero />
       <AboutSyntigra />
