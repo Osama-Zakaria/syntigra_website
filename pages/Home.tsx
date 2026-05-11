@@ -202,6 +202,76 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* Product Highlight: Windows Service Agent */}
+      <section className="py-24 bg-slate-950 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange/50 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div className="lg:w-1/2">
+                    <RevealOnScroll>
+                        <div className="inline-flex items-center px-4 py-2 rounded-full border border-brand-purple/30 bg-brand-purple/10 text-brand-purple text-sm font-bold mb-6">
+                            <Cpu className="w-4 h-4 mr-2" />
+                            LOCAL DATA COLLECTION
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+                            Syntigra <span className="text-brand-orange">Service Agent</span>
+                        </h2>
+                        <p className="text-slate-400 text-xl leading-relaxed mb-8">
+                            Streamline your data ingestion processes with our intuitive and efficient Windows data collector. Designed for rapid deployment and minimal configuration.
+                        </p>
+                        
+                        <div className="space-y-6 mb-10">
+                            {[
+                                { t: 'Rapid Deployment', d: 'Get up and running in minutes with zero complex dependencies.' },
+                                { t: 'Local Data Extraction', d: 'Automatically transform disparate local data into consumable formats.' },
+                                { t: 'Direct ETL Feeding', d: 'Seamlessly push local assets directly into your central data pipelines.' }
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-start bg-slate-900/50 p-4 rounded-xl border border-slate-800 hover:border-brand-purple/50 transition-all">
+                                    <div className="w-10 h-10 rounded-lg bg-brand-purple/20 flex items-center justify-center mr-4 shrink-0">
+                                        <Zap className="w-5 h-5 text-brand-purple" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-bold mb-1">{item.t}</h4>
+                                        <p className="text-slate-500 text-sm">{item.d}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <button className="px-8 py-4 rounded-lg bg-white text-slate-950 font-black hover:bg-slate-200 transition-all flex items-center">
+                            Download Agent for Windows
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                        </button>
+                    </RevealOnScroll>
+                </div>
+
+                <div className="lg:w-1/2 relative">
+                    <RevealOnScroll delay={200}>
+                        <div className="glass-panel p-12 rounded-3xl border-brand-purple/20 relative group overflow-hidden">
+                            <div className="absolute inset-0 grid-bg opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                            <div className="relative z-10 flex flex-col items-center">
+                                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-brand-orange to-brand-purple p-0.5 mb-8 shadow-2xl">
+                                    <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+                                        <Database className="w-12 h-12 text-white animate-bounce" />
+                                    </div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-black text-white mb-2">Syntigra.Agent.exe</div>
+                                    <div className="text-brand-purple font-mono text-sm tracking-widest">VERSION 2.4.0 - STABLE</div>
+                                    <div className="mt-8 flex gap-2">
+                                        {[1,2,3,4,5].map(i => (
+                                            <div key={i} className="w-8 h-1.5 rounded-full bg-brand-purple/30 animate-pulse" style={{ animationDelay: `${i*200}ms` }}></div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </RevealOnScroll>
+                </div>
+            </div>
+        </div>
+      </section>
+
       {/* Feature / Analytics Preview with Blueprint */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
