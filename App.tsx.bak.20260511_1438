@@ -362,7 +362,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-[60] bg-slate-950 flex flex-col p-6 overflow-y-auto"
+            className="fixed inset-0 z-[60] bg-slate-950 flex flex-col p-6"
           >
             <div className="flex items-center justify-between mb-12">
                <a href="#" className="flex items-center gap-2 font-display font-bold text-xl tracking-tight text-white" onClick={() => setIsMobileMenuOpen(false)}>
@@ -556,7 +556,7 @@ const Hero = () => {
             <span className="text-xs font-semibold tracking-wide text-cyan-300 uppercase">Next Gen Data Architecture</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.85] mb-10 tracking-tighter">
+          <h1 className="text-8xl md:text-[11rem] font-display font-bold leading-[0.85] mb-10 tracking-tighter">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-slate-500/50">
               Transform Data Into
             </span> <br />
@@ -1376,7 +1376,7 @@ const Blog = () => {
           </motion.a>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {BLOG_POSTS.map((post, index) => (
             <motion.div
               key={index}
@@ -1459,7 +1459,7 @@ const Careers = () => {
           ></motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {JOBS.map((job, index) => (
             <motion.a
               key={index}
